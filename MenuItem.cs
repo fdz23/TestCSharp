@@ -9,7 +9,7 @@ namespace ApresentacaoUmEstagioB
         {
             Price = price;
         }
-        public void MostrarNaTelaLower()
+        public void PrintLower()
         {
             string price = Price.ToString("C", CultureInfo.CreateSpecificCulture("pt-BR"));
             System.Console.WriteLine($"{Name.ToLower()}\n{Description.ToLower()}\n{price}");
