@@ -2,16 +2,16 @@ namespace ApresentacaoUmEstagioB
 {
     abstract class MenuAbstract
     {
-        public string Nome { get; set; }
-        public string Descricao { get; set; }
-        public MenuAbstract(string nome, string descricao)
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public MenuAbstract(string name, string description)
         {
-            Nome = nome;
-            Descricao = descricao;
+            Name = name;
+            Description = description;
         }
-        public virtual void MostrarNaTela()
+        public virtual void Print()
         {
-            System.Console.WriteLine($"{Nome}\n{Descricao}");
+            System.Console.WriteLine($"{Name}\n{Description}");
         }
     }
 }

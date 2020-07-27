@@ -27,11 +27,11 @@ namespace ApresentacaoUmEstagioB
         {
             var items = menus
                 .Where(x => x is Menu)
-                .OrderBy(x => x.Nome);
+                .OrderBy(x => x.Name);
 
             foreach (Menu item in items)
             {
-                item.MostrarNaTelaUpper();
+                item.PrintUpper();
                 Console.WriteLine("-------------");
             }
         }
@@ -40,7 +40,7 @@ namespace ApresentacaoUmEstagioB
         {
             var items = menus
                 .Where(x => x is MenuItem)
-                .OrderBy(x => x.Nome);
+                .OrderBy(x => x.Name);
 
             foreach (MenuItem item in items)
             {
@@ -52,11 +52,11 @@ namespace ApresentacaoUmEstagioB
         public void ShowAllOrderedByDescription()
         {
             var items = menus
-                .OrderBy(x => x.Descricao);
+                .OrderBy(x => x.Description);
 
             foreach (MenuAbstract item in items)
             {
-                item.MostrarNaTela();
+                item.Print();
                 Console.WriteLine("-------------");
             }
         }

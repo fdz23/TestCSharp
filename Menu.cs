@@ -13,7 +13,7 @@ namespace ApresentacaoUmEstagioB
 
         public void PrintUpper()
         {
-            Console.WriteLine($"{Nome.ToUpper()}\n{Descricao.ToUpper()}");
+            Console.WriteLine($"{Name.ToUpper()}\n{Description.ToUpper()}");
         }
 
         public override void Print()
