@@ -44,7 +44,7 @@ namespace ApresentacaoUmEstagioB
 
             foreach (MenuItem item in items)
             {
-                item.MostrarNaTelaLower();
+                item.PrintLower();
                 Console.WriteLine("-------------");
             }
         }
