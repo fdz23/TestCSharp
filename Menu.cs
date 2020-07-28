@@ -14,11 +14,12 @@ namespace ApresentacaoUmEstagioB
         public void PrintUpper()
         {
             Console.WriteLine($"{Name.ToUpper()}\n{Description.ToUpper()}");
+            System.Console.WriteLine("-------------");
         }
 
         public override void Print()
         {
-            Console.WriteLine("I'm a menu");
+            Console.WriteLine("I'm a Menu");
             base.Print();
         }
     }

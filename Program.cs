@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 namespace ApresentacaoUmEstagioB
 {
@@ -14,6 +14,8 @@ namespace ApresentacaoUmEstagioB
             bar.ShowItemsOrderByNameLowerCase();
             Console.WriteLine("Printing everything ordered by description\n-------------");
             bar.ShowAllOrderedByDescription();
+            System.Console.WriteLine("Printing only SubMenus ordered by name\n-------------");
+            bar.ShowSubMenuOrderedByName();
         }
     }
 }

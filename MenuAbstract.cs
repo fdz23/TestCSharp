@@ -11,7 +11,9 @@ namespace ApresentacaoUmEstagioB
         }
         public virtual void Print()
         {
+            System.Console.WriteLine("I'm a MenuAbstract");
             System.Console.WriteLine($"{Name}\n{Description}");
+            System.Console.WriteLine("-------------");
         }
     }
 }

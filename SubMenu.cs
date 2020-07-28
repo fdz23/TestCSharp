@@ -14,6 +14,7 @@ namespace ApresentacaoUmEstagioB
         public void PrintSubMenu()
         {
             Console.WriteLine($"I'm a SubMenu now\n{Name}\n{Description}");
+            System.Console.WriteLine("-------------");
         }
 
         public override void Print()

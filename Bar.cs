@@ -25,40 +25,37 @@ namespace ApresentacaoUmEstagioB
 
         public void ShowMenusOrderedByNameUpperCase()
         {
-            var items = menus
-                .Where(x => x is Menu)
-                .OrderBy(x => x.Name);
-
-            foreach (Menu item in items)
-            {
-                item.PrintUpper();
-                Console.WriteLine("-------------");
-            }
+            menus
+                .OfType<Menu>()
+                .OrderBy(x => x.Name)
+                .ToList()
+                .ForEach(x => x.PrintUpper());
         }
 
         public void ShowItemsOrderByNameLowerCase()
         {
-            var items = menus
-                .Where(x => x is MenuItem)
-                .OrderBy(x => x.Name);
-
-            foreach (MenuItem item in items)
-            {
-                item.PrintLower();
-                Console.WriteLine("-------------");
-            }
+            menus
+                .OfType<MenuItem>()
+                .OrderBy(x => x.Name)
+                .ToList()
+                .ForEach(x => x.PrintLower());
         }
 
         public void ShowAllOrderedByDescription()
         {
-            var items = menus
-                .OrderBy(x => x.Description);
+            menus
+                .OrderBy(x => x.Description)
+                .ToList()
+                .ForEach(x => x.Print());
+        }
 
-            foreach (MenuAbstract item in items)
-            {
-                item.Print();
-                Console.WriteLine("-------------");
-            }
+        public void ShowSubMenuOrderedByName()
+        {
+            menus
+                .OfType<SubMenu>()
+                .OrderBy(x => x.Name)
+                .ToList()
+                .ForEach(x => x.Print());
         }
     }
 }
